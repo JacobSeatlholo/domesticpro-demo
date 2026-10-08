@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { I18nProvider } from "@/lib/i18n-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Domestic Pro Service — Eco-Friendly & Pet-Safe Cleaning | Cape Town Northern Suburbs",
   description:
-    "AI-powered booking & dispatch demo for Domestic Pro Service. Eco-friendly, pet-safe cleaning across Durbanville, Bellville, Tygervalley and Parow. Built by BusinessHustle.",
+    "Professional cleaning you can trust since 2021. Reliable, eco-friendly & pet-safe cleaning for homes and businesses in Durbanville, Bellville, Tygervalley & Parow. Demo built by BusinessHustle.",
   keywords: [
     "Domestic Pro",
     "eco-friendly cleaning",
@@ -28,17 +29,26 @@ export const metadata: Metadata = {
     "Parow",
     "Cape Town cleaning",
     "BusinessHustle",
+    "Northern Suburbs",
+    "residential cleaning",
+    "commercial cleaning",
+    "deep cleaning",
   ],
-  authors: [{ name: "BusinessHustle", url: "https://www.businesshustle.co.za" }],
+  authors: [{ name: "Domestic Pro Service (Pty) Ltd", url: "https://domesticpro.co.za" }],
+  creator: "BusinessHustle (https://www.businesshustle.co.za)",
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/domestic-pro-logo.png", type: "image/png", sizes: "200x67" },
+    ],
+    apple: [{ url: "/dp-logo-full.png", sizes: "192x192", type: "image/png" }],
   },
   openGraph: {
     title: "Domestic Pro Service — Eco-Friendly & Pet-Safe Cleaning",
     description:
-      "AI-powered booking & dispatch demo for Domestic Pro Service across Cape Town Northern Suburbs.",
+      "Professional cleaning you can trust since 2021. AI-powered booking & dispatch demo for Domestic Pro Service across Cape Town Northern Suburbs.",
     url: "https://domesticpro.co.za",
     siteName: "Domestic Pro Service",
+    locale: "en_ZA",
     type: "website",
   },
   twitter: {
@@ -59,7 +69,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <I18nProvider>
+          {children}
+        </I18nProvider>
         <Toaster />
         <Sonner position="top-right" richColors closeButton />
       </body>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { TrendingUp, Calendar, Users, Repeat } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 interface Metric {
   icon: React.ElementType;
@@ -12,31 +13,6 @@ interface Metric {
   prefix?: string;
   description: string;
 }
-
-const METRICS: Metric[] = [
-  {
-    icon: Calendar,
-    label: "Off-season calendar fill",
-    value: 35,
-    suffix: "%",
-    prefix: "+",
-    description: "Estimated monthly uplift from automated intake vs. word-of-mouth referrals.",
-  },
-  {
-    icon: Users,
-    label: "Adjacent corridor leads",
-    value: 22,
-    suffix: "%",
-    description: "Cross-referral overlap between Durbanville / Bellville / Tygervalley / Parow.",
-  },
-  {
-    icon: Repeat,
-    label: "Recurring weekly rate",
-    value: 68,
-    suffix: "%",
-    description: "Likelihood of converting a one-off deep clean into a recurring weekly slot.",
-  },
-];
 
 function AnimatedCounter({
   to,
@@ -48,9 +24,6 @@ function AnimatedCounter({
   suffix?: string;
 }) {
   const count = useMotionValue(0);
-  const rounded = useTransform(count, (v) =>
-    `${prefix}${Math.round(v)}${suffix}`
-  );
   const [display, setDisplay] = useState(`${prefix}0${suffix}`);
 
   useEffect(() => {
@@ -74,34 +47,59 @@ function AnimatedCounter({
 }
 
 export function RoiCounter() {
+  const { t } = useI18n();
+
+  const metrics: Metric[] = [
+    {
+      icon: Calendar,
+      label: t.roiOffSeasonLabel,
+      value: 35,
+      suffix: "%",
+      prefix: "+",
+      description: t.roiOffSeasonDesc,
+    },
+    {
+      icon: Users,
+      label: t.roiAdjacentLabel,
+      value: 22,
+      suffix: "%",
+      description: t.roiAdjacentDesc,
+    },
+    {
+      icon: Repeat,
+      label: t.roiRecurringLabel,
+      value: 68,
+      suffix: "%",
+      description: t.roiRecurringDesc,
+    },
+  ];
+
   return (
     <section
-      aria-label="ROI & Referral Engine"
-      className="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 p-4 text-emerald-50 shadow-md sm:p-5"
+      aria-label={t.roiTitle}
+      className="rounded-xl border border-lime-300/40 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 p-4 text-lime-50 shadow-md sm:p-5"
     >
       <div className="flex items-center justify-between gap-3">
         <div>
           <h2 className="flex items-center gap-2 text-sm font-bold tracking-tight">
-            <span className="grid h-7 w-7 place-items-center rounded-lg bg-emerald-50/10 ring-1 ring-emerald-300/30">
-              <TrendingUp className="h-4 w-4 text-emerald-200" aria-hidden />
+            <span className="grid h-7 w-7 place-items-center rounded-lg bg-lime-300/10 ring-1 ring-lime-300/30">
+              <TrendingUp className="h-4 w-4 text-lime-200" aria-hidden />
             </span>
-            ROI &amp; Referral Engine
+            {t.roiTitle}
           </h2>
-          <p className="mt-1 text-[11px] text-emerald-200/80">
-            Live business impact — BusinessHustle automation for Domestic Pro.
-          </p>
+          <p className="mt-1 text-[11px] text-lime-100/80">{t.roiLead}</p>
         </div>
-        <Badge className="gap-1 border-emerald-300/30 bg-emerald-50/10 text-emerald-100">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-lime-300/30 bg-lime-300/10 px-2.5 py-1 text-[11px] font-semibold text-lime-100">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-300 status-pulse" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-200" />
+            <span className="absolute inline-flex h-full w-full rounded-full bg-lime-300 status-pulse" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-lime-200" />
           </span>
-          Realtime
-        </Badge>
+          {t.roiRealtime}
+        </span>
       </div>
 
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        {METRICS.map((m) => {
+        {metrics.map((m) => {
           const Icon = m.icon;
           return (
             <motion.div
@@ -109,18 +107,16 @@ export function RoiCounter() {
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.05 }}
-              className="rounded-lg border border-emerald-300/20 bg-emerald-50/5 p-3 backdrop-blur-sm"
+              className="rounded-lg border border-lime-300/20 bg-lime-300/5 p-3 backdrop-blur-sm"
             >
-              <div className="flex items-center gap-2 text-emerald-200">
+              <div className="flex items-center gap-2 text-lime-200">
                 <Icon className="h-3.5 w-3.5" aria-hidden />
-                <span className="text-[11px] font-medium uppercase tracking-wide">
-                  {m.label}
-                </span>
+                <span className="text-[11px] font-medium uppercase tracking-wide">{m.label}</span>
               </div>
               <p className="mt-1 text-2xl font-bold text-white">
                 <AnimatedCounter to={m.value} prefix={m.prefix} suffix={m.suffix} />
               </p>
-              <p className="mt-1 text-[10.5px] leading-tight text-emerald-200/70">
+              <p className="mt-1 text-[10.5px] leading-tight text-lime-100/70">
                 {m.description}
               </p>
             </motion.div>
@@ -128,28 +124,11 @@ export function RoiCounter() {
         })}
       </div>
 
-      <p className="mt-3 text-[11px] text-emerald-200/70">
-        <span className="font-semibold text-emerald-100">Headline:</span>{" "}
-        Estimated monthly off-season calendar fill rate:{" "}
+      <p className="mt-3 text-[11px] text-lime-100/70">
+        <span className="font-semibold text-lime-100">Headline:</span>{" "}
+        {t.roiHeadline}{" "}
         <span className="font-bold text-white">+35%</span> vs. word-of-mouth only.
       </p>
     </section>
-  );
-}
-
-// tiny local Badge to keep this component self-contained
-function Badge({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <span
-      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] font-semibold ${className}`}
-    >
-      {children}
-    </span>
   );
 }
