@@ -193,6 +193,56 @@ export interface Dict {
   whatsapp: string;
   // Misc
   durbanvilleCorridor: string;
+  // Shop section
+  shopEyebrow: string;
+  shopTitle: string;
+  shopLead: string;
+  shopCta: string;
+  shopBrowseAll: string;
+  shopAddToBasket: string;
+  shopOnSale: string;
+  shopComboBadge: string;
+  shopFeaturedTitle: string;
+  shopFeaturedLead: string;
+  shopFreeDelivery: string;
+  shopZAAware: string;
+  shopEcoTag: string;
+  shopPetTag: string;
+  shopFamilyTag: string;
+  shopComboTag: string;
+  shopCart: string;
+  shopCartTotal: string;
+  shopCartCheckout: string;
+  shopCartEmpty: string;
+  shopContinueShopping: string;
+  shopTotalItems: string;
+  shopItems: string;
+  shopRemove: string;
+  shopAddedToCart: string;
+  shopRemovedFromCart: string;
+  shopShowOnly: string;
+  catAll: string;
+  catCombo: string;
+  catMulti: string;
+  catKitchen: string;
+  catFloor: string;
+  catFabric: string;
+  catAir: string;
+  catSneaker: string;
+  // Product taglines (short benefit statements)
+  prodAirTag: string;
+  prodSneakerTag: string;
+  prodDishTag: string;
+  prodComboTag: string;
+  prodFloorTag: string;
+  prodHandyTag: string;
+  prodFabricTag: string;
+  prodMultiCitrusTag: string;
+  prodMultiGreenTag: string;
+  // Reviews/review modal
+  reviewsAvRating: string;
+  reviewsAvRatingDesc: string;
+  navShop: string;
 }
 
 export const DICT: Record<Locale, Dict> = {
@@ -378,6 +428,57 @@ export const DICT: Record<Locale, Dict> = {
     footerFiona: "Demo built by BusinessHustle · Fiona Burke",
     whatsapp: "WhatsApp us",
     durbanvilleCorridor: "Durbanville Corridor",
+
+    // Shop section (EN)
+    shopEyebrow: "Shop DPS — Domestic Pro Supplies",
+    shopTitle: "Eco-friendly cleaning products, bottled with care.",
+    shopLead:
+      "Bring the Domestic Pro standard home. Our pet-safe, eco-friendly cleaners are formulated for Cape Town homes — buy online or add them to your next clean.",
+    shopCta: "Browse the shop",
+    shopBrowseAll: "Browse all products",
+    shopAddToBasket: "Add to basket",
+    shopOnSale: "Sale",
+    shopComboBadge: "Best value",
+    shopFeaturedTitle: "Featured — DPS Cleaning Combo",
+    shopFeaturedLead:
+      "A full starter pack: multi-purpose, dish, floor, and fabric cleaners in one bundle. Rated 5.00 by Cape Town customers — save R50.99 today.",
+    shopFreeDelivery: "Free local delivery in Durbanville · Bellville · Tygervalley · Parow on orders over R250",
+    shopZAAware: "Formulated & bottled in South Africa",
+    shopEcoTag: "Eco-friendly",
+    shopPetTag: "Pet-safe",
+    shopFamilyTag: "Family-safe",
+    shopComboTag: "Bundle & save",
+    shopCart: "Your cart",
+    shopCartTotal: "Order total",
+    shopCartCheckout: "Checkout",
+    shopCartEmpty: "Your cart is empty",
+    shopContinueShopping: "Continue shopping",
+    shopTotalItems: "Items in cart",
+    shopItems: "items",
+    shopRemove: "Remove",
+    shopAddedToCart: "Added to cart",
+    shopRemovedFromCart: "Removed from cart",
+    shopShowOnly: "Showing",
+    catAll: "All products",
+    catCombo: "Combo bundles",
+    catMulti: "Multi-purpose",
+    catKitchen: "Kitchen",
+    catFloor: "Floor & tile",
+    catFabric: "Fabric & linen",
+    catAir: "Air freshener",
+    catSneaker: "Sneaker cleaner",
+    prodAirTag: "Long-lasting cherry scent for any room.",
+    prodSneakerTag: "Gentle on sneakers, tough on dirt.",
+    prodDishTag: "Cuts grease, gentle on hands.",
+    prodComboTag: "4 cleaners, 1 bundle, R50 saving.",
+    prodFloorTag: "Streak-free shine on tile & laminate.",
+    prodHandyTag: "All-purpose lemon cleaner, every surface.",
+    prodFabricTag: "Refreshes linen between washes.",
+    prodMultiCitrusTag: "Citrus-burst degreaser, kitchen to bath.",
+    prodMultiGreenTag: "Pet-safe, plant-based all-rounder.",
+    reviewsAvRating: "5.0",
+    reviewsAvRatingDesc: "average rating across all DPS products",
+    navShop: "Shop DPS",
   },
 
   af: {
@@ -560,6 +661,57 @@ export const DICT: Record<Locale, Dict> = {
     footerFiona: "Demo gebou deur BusinessHustle · Fiona Burke",
     whatsapp: "WhatsApp ons",
     durbanvilleCorridor: "Durbanville Korridor",
+
+    // Shop section (AF)
+    shopEyebrow: "Shop DPS — Domestic Pro Voorraad",
+    shopTitle: "Eko-vriendelike skoonmaakprodukte, met sorg gebottel.",
+    shopLead:
+      "Bring die Domestic Pro standaard huis toe. Ons troeteldier-veilige, eko-vriendelike skoonmakers is gemeng vir Kaapstadse huise — koop aanlyn of voeg by jou volgende skoonmaak.",
+    shopCta: "Blaai deur die winkel",
+    shopBrowseAll: "Blaai deur alle produkte",
+    shopAddToBasket: "Voeg by mandjie",
+    shopOnSale: "Aanbieding",
+    shopComboBadge: "Beste waarde",
+    shopFeaturedTitle: "Beklemtoon — DPS Skoonmaak Kombopak",
+    shopFeaturedLead:
+      "'n Volle beginnerpak: multi-doel, skottelgoed, vloer, en stofskoonmakers in een bundel. Gewaardeer 5.00 deur Kaapstadse kliënte — bespaar R50.99 vandag.",
+    shopFreeDelivery: "Gratis plaaslike aflewering in Durbanville · Bellville · Tygervalley · Parow op bestellings bo R250",
+    shopZAAware: "Gemeng & gebottel in Suid-Afrika",
+    shopEcoTag: "Eko-vriendelik",
+    shopPetTag: "Troeteldier-veilig",
+    shopFamilyTag: "Gesins-veilig",
+    shopComboTag: "Bundel & bespaar",
+    shopCart: "Jou mandjie",
+    shopCartTotal: "Bestelling totaal",
+    shopCartCheckout: "Kassaad",
+    shopCartEmpty: "Jou mandjie is leeg",
+    shopContinueShopping: "Gaan voort met winkel",
+    shopTotalItems: "Items in mandjie",
+    shopItems: "items",
+    shopRemove: "Verwyder",
+    shopAddedToCart: "By mandjie gevoeg",
+    shopRemovedFromCart: "Uit mandjie verwyder",
+    shopShowOnly: "Wys",
+    catAll: "Alle produkte",
+    catCombo: "Kombopakke",
+    catMulti: "Multi-doel",
+    catKitchen: "Kombuis",
+    catFloor: "Vloer & teël",
+    catFabric: "Stof & linne",
+    catAir: "Lugverfrisser",
+    catSneaker: "Skoonmaker vir skoene",
+    prodAirTag: "Langdurige kersiegeur vir enige kamer.",
+    prodSneakerTag: "Sag op skoene, hard op vuil.",
+    prodDishTag: "Sny vet, sag op hande.",
+    prodComboTag: "4 skoonmakers, 1 bundel, R50 besparing.",
+    prodFloorTag: "Vleklose glans op teël & laminaat.",
+    prodHandyTag: "All-doel sitroenskoonmaker, elke oppervlak.",
+    prodFabricTag: "Verfris linne tussen wasse.",
+    prodMultiCitrusTag: "Sitrus ontveter, kombuis tot bad.",
+    prodMultiGreenTag: "Troeteldier-veilig, plant-gebaseerde all-rounder.",
+    reviewsAvRating: "5.0",
+    reviewsAvRatingDesc: "gemiddelde gradering oor alle DPS produkte",
+    navShop: "Shop DPS",
   },
 
   xh: {
@@ -742,5 +894,56 @@ export const DICT: Record<Locale, Dict> = {
     footerFiona: "Idemo yenziwe yiBusinessHustle · Fiona Burke",
     whatsapp: "Sincoca nge-WhatsApp",
     durbanvilleCorridor: "Ikorido yeDurbanville",
+
+    // Shop section (XH)
+    shopEyebrow: "Shop DPS — Iimpahla zikaDomestic Pro",
+    shopTitle: "Iimveliso zokucoca ezingahlali zingcolisa imvelo, ezibotshiwe ngokukhathalela.",
+    shopLead:
+      "Rhweba isindingi seDomestic Pro endlini. Abacoci bethu abakhusele amahhashi, abangacolisi imvelo, benziwe kakhulu kwiiapolis zakwaKapa — rhweba online okanye ufake kwikocoya yakho elandelayo.",
+    shopCta: "Khangela kwithanga",
+    shopBrowseAll: "Khangela zonke iimveliso",
+    shopAddToBasket: "Yongeza kwlangu",
+    shopOnSale: "Ntengiso",
+    shopComboBadge: "Ixabiso elihle kakhulu",
+    shopFeaturedTitle: "Phawuli — DPS Ikhombo lokucoca",
+    shopFeaturedLead:
+      "Iqela eligqibeleleyo le-eco: ukucoca okuzonke, okwesitya, okwomhlaba, noludongolo elinye. Ligqitywe 5.00 yabathengi bakwaKapa — ugcine R50.99 namhlanje.",
+    shopFreeDelivery: "Iyalela mahala kwindawo eDurbanville · Bellville · Tygervalley · Parow kwirekhodi ngaphezulu koR250",
+    shopZAAware: "Iqaliwe nabotshiwe eMzantsi Afrika",
+    shopEcoTag: "Ehlonipha imvelo",
+    shopPetTag: "Ikhusele amahhashi",
+    shopFamilyTag: "Ikhusele intsapho",
+    shopComboTag: "Qhatha ugcine",
+    shopCart: "Ilangu yakho",
+    shopCartTotal: "Isixa sesaziso",
+    shopCartCheckout: "Qinisekisa",
+    shopCartEmpty: "Ilangu yakho izele",
+    shopContinueShopping: "Qhubeka norhwabo",
+    shopTotalItems: "Iinto kwilangu",
+    shopItems: "iinto",
+    shopRemove: "Susa",
+    shopAddedToCart: "Kongezwe kwilangu",
+    shopRemovedFromCart: "Kususiwe kwilangu",
+    shopShowOnly: "Kubonisa",
+    catAll: "Zonke iimveliso",
+    catCombo: "Iikhombo zeqela",
+    catMulti: "Yonke indlela",
+    catKitchen: "Igumbi lokutya",
+    catFloor: "Umntwana nethayile",
+    catFabric: "Isixa noludongolo",
+    catAir: "Abaqambi bomoya",
+    catSneaker: "Ukucoca iinketho",
+    prodAirTag: "Ifumbe elide le-cherry kwindawo nganye.",
+    prodSneakerTag: "Sefula kwiinketho, inamandla kwindalo.",
+    prodDishTag: "Icheba amafutha, khusele izandla.",
+    prodComboTag: "4 abacoci, 1 iqela, R50 ukugcina.",
+    prodFloorTag: "Ukukhanya ngaphandle kwezihlanu kwethayile nalaminet.",
+    prodHandyTag: "Yonke-indlela isitruyi, yonke indawo.",
+    prodFabricTag: "Hlaziya ilineni phakathi kwamaxhatho.",
+    prodMultiCitrusTag: "Citrus ukukhaba amafutha, esitya kwebhafu.",
+    prodMultiGreenTag: "Ikhusele amahhashi, yonke-indlela entyanweni.",
+    reviewsAvRating: "5.0",
+    reviewsAvRatingDesc: "ukugqibela okumiddlinga kuzo zonke iimveliso zeDPS",
+    navShop: "Shop DPS",
   },
 };

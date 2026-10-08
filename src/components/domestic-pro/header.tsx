@@ -98,6 +98,7 @@ export function Header() {
             { label: t.navHome, href: "#top" },
             { label: t.navAbout, href: "#about" },
             { label: t.navServices, href: "#services" },
+            { label: t.navShop, href: "#shop" },
             { label: t.navContact, href: "#contact" },
           ].map((n) => (
             <a
@@ -150,6 +151,9 @@ export function Header() {
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a href="#services" className="cursor-pointer">{t.navServices}</a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="#shop" className="cursor-pointer">{t.navShop}</a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a href="#demo" className="cursor-pointer">{t.navBook}</a>

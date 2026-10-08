@@ -5,6 +5,7 @@ import { Hero } from "@/components/domestic-pro/hero";
 import { Services } from "@/components/domestic-pro/services";
 import { WhyChooseUs } from "@/components/domestic-pro/why-choose-us";
 import { Areas } from "@/components/domestic-pro/areas";
+import { Shop } from "@/components/domestic-pro/shop";
 import { CustomerIntakeForm } from "@/components/domestic-pro/customer-intake-form";
 import { AiPipeline } from "@/components/domestic-pro/ai-pipeline";
 import { AdminDashboard } from "@/components/domestic-pro/admin-dashboard";
@@ -25,6 +26,7 @@ export default function Home() {
         <Services />
         <WhyChooseUs />
         <Areas />
+        <Shop />
 
         {/* Demo section — 3-column / dual-panel */}
         <section
